@@ -5,10 +5,28 @@
     <link>https://lcoco.github.io/series/themes-guide/</link>
     <description>Recent content in Themes Guide on Pure theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 Nov 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://lcoco.github.io/series/themes-guide/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>35 个 Java 代码优化小技巧</title>
+      <link>https://lcoco.github.io/2019/11/35-%E4%B8%AA-java-%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96%E5%B0%8F%E6%8A%80%E5%B7%A7/</link>
+      <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://lcoco.github.io/2019/11/35-%E4%B8%AA-java-%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96%E5%B0%8F%E6%8A%80%E5%B7%A7/</guid>
+      <description>35 个 Java 代码优化小技巧 前言 代码优化，一个很重要的课题。可能有些人觉得没用，一些细小的地方有什么好修改的，改与不改对于代码的运行效率有什么影响呢</description>
+    </item>
+    
+    <item>
+      <title>像Excel一样使用python进行数据分析-(1)</title>
+      <link>https://lcoco.github.io/2019/11/%E5%83%8Fexcel%E4%B8%80%E6%A0%B7%E4%BD%BF%E7%94%A8python/</link>
+      <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://lcoco.github.io/2019/11/%E5%83%8Fexcel%E4%B8%80%E6%A0%B7%E4%BD%BF%E7%94%A8python/</guid>
+      <description>Excel是数据分析中最常用的工具，本篇文章通过python与excel的功能对比介绍如何使用python通过函数式编程完成excel中的数</description>
+    </item>
     
     <item>
       <title>Markdown Syntax Guide</title>

@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+        像Excel一样使用python进行数据分析-(1) - Pure theme for Hugo
+      </title>
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  
+  <meta name="theme-color" content="#000000" />
+  
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <meta name="description" content="像Excel一样使用python进行数据分析-(1)" />
+  <meta name="generator" content="Hugo 0.59.0 with theme pure" />
+  <title>像Excel一样使用python进行数据分析-(1) - Pure theme for Hugo</title>
+  
+
+  <link rel="stylesheet" href="https://lcoco.github.io/css/style.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css">
+  <meta property="og:title" content="像Excel一样使用python进行数据分析-(1)" />
+<meta property="og:description" content="像Excel一样使用python进行数据分析-(1)" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lcoco.github.io/2019/11/%E5%83%8Fexcel%E4%B8%80%E6%A0%B7%E4%BD%BF%E7%94%A8python/" />
+<meta property="article:published_time" content="2019-11-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-11-28T00:00:00+00:00" />
+
+<meta itemprop="name" content="像Excel一样使用python进行数据分析-(1)">
+<meta itemprop="description" content="像Excel一样使用python进行数据分析-(1)">
+
+
+<meta itemprop="datePublished" content="2019-11-28T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-11-28T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="3859">
+
+
+
+<meta itemprop="keywords" content="转载," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="像Excel一样使用python进行数据分析-(1)"/>
+<meta name="twitter:description" content="像Excel一样使用python进行数据分析-(1)"/>
+
+  <!--[if lte IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+    <![endif]-->
+
+  <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+  </head>
+  <body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="https://github.com/lcoco" target="_blank">
+            <img class="img-circle img-rotate" src="https://lcoco.github.io/avatar.png" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">Taige</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">Get Moving! by HT.Zhang</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>Beijing, China</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-home">
+                <a href="/">
+                    <i class="icon icon-home-fill"></i>
+                  <span class="menu-title">Home</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-archives">
+                <a href="/posts">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">Archives</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-categories">
+                <a href="/categories">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">Categories</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-tags">
+                <a href="/tags">
+                    <i class="icon icon-tags"></i>
+                  <span class="menu-title">Tags</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-about">
+                <a href="/about">
+                    <i class="icon icon-cup-fill"></i>
+                  <span class="menu-title">About</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">Board</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content"><p>enjoy~</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+      <div class="widget">
+    <h3 class="widget-title"> Categories</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+            <li class="category-list-item"><a href="https://lcoco.github.io/categories/java/" class="category-list-link">java</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://lcoco.github.io/categories/python/" class="category-list-link">python</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://lcoco.github.io/categories/syntax/" class="category-list-link">syntax</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://lcoco.github.io/categories/themes/" class="category-list-link">themes</a><span class="category-list-count">1</span></li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> Tags</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://lcoco.github.io/tags/css/" class="tag-list-link">css</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://lcoco.github.io/tags/emoji/" class="tag-list-link">emoji</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://lcoco.github.io/tags/html/" class="tag-list-link">html</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://lcoco.github.io/tags/markdown/" class="tag-list-link">markdown</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://lcoco.github.io/tags/text/" class="tag-list-link">text</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://lcoco.github.io/tags/themes/" class="tag-list-link">themes</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://lcoco.github.io/tags/%E4%BC%98%E5%8C%96/" class="tag-list-link">优化</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://lcoco.github.io/tags/%E8%BD%AC%E8%BD%BD/" class="tag-list-link">转载</a><span
+                    class="tag-list-count">1</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+      
+  </div>
+</aside>
+
+    
+    
+  <aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+    <div class="slimContent">
+      <nav id="toc" class="article-toc">
+        <h3 class="toc-title">Catalogue</h3>
+        <div class="toc-content always-active"><nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#excel是数据分析中最常用的工具-本篇文章通过python与excel的功能对比介绍如何使用python通过函数式编程完成excel中的数据处理及分析工作-在python中pandas库用于数据处理-我们从1787页的pandas官网文档中总结出最常用的36个函数-通过这些函数介绍如何通过python完成数据生成和导入-数据清洗-预处理-以及最常见的数据分类-数据筛选-分类-汇总-透视等最常见的操作">Excel是数据分析中最常用的工具，本篇文章通过python与excel的功能对比介绍如何使用python通过函数式编程完成excel中的数据处理及分析工作。在Python中pandas库用于数据处理 ，我们从1787页的pandas官网文档中总结出最常用的36个函数，通过这些函数介绍如何通过python完成数据生成和导入，数据清洗，预处理，以及最常见的数据分类，数据筛选，分类 汇总，透视等最常见的操作。</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#1-生成数据表">1， 生成数据表</a>
+<ul>
+<li><a href="#导入数据表">导入数据表</a></li>
+<li><a href="#创建数据表">创建数据表</a></li>
+</ul></li>
+<li><a href="#df-http-bluewhale-cc-wp-content-uploads-2017-04-df-png-http-bluewhale-cc-wp-content-uploads-2017-04-df-png"><a href="http://bluewhale.cc/wp-content/uploads/2017/04/df.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/df.png" alt="df" /></a></a>
+<ul>
+<li><a href="#数据维度-行列">数据维度(行列)</a></li>
+<li><a href="#数据表信息">数据表信息</a></li>
+<li><a href="#查看数据格式">查看数据格式</a></li>
+<li><a href="#查看空值">查看空值</a></li>
+<li><a href="#查看唯一值">查看唯一值</a></li>
+<li><a href="#查看数据表数值">查看数据表数值</a></li>
+<li><a href="#查看列名称">查看列名称</a></li>
+<li><a href="#查看前10行数据">查看前10行数据</a></li>
+<li><a href="#查看后10行数据">查看后10行数据</a></li>
+</ul></li>
+<li><a href="#3-数据表清洗">3，数据表清洗</a>
+<ul>
+<li><a href="#处理空值-删除或填充">处理空值(删除或填充)</a></li>
+<li><a href="#清理空格">清理空格</a></li>
+<li><a href="#大小写转换">大小写转换</a></li>
+<li><a href="#lower-http-bluewhale-cc-wp-content-uploads-2017-04-lower-png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/lower.png" alt="lower" /></a></li>
+<li><a href="#更改数据格式">更改数据格式</a></li>
+<li><a href="#更改列名称">更改列名称</a></li>
+<li><a href="#删除重复值">删除重复值</a></li>
+<li><a href="#数值修改及替换">数值修改及替换</a></li>
+</ul></li>
+</ul>
+</nav>
+        </div>
+      </nav>
+    </div>
+  </aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2019/11/%E5%83%8Fexcel%E4%B8%80%E6%A0%B7%E4%BD%BF%E7%94%A8python/"
+    >像Excel一样使用python进行数据分析-(1)</a
+  >
+</h1>
+
+      <div class="article-meta">
+        <span class="article-date">
+  <i class="icon icon-calendar-check"></i>
+<a href="https://lcoco.github.io/2019/11/%E5%83%8Fexcel%E4%B8%80%E6%A0%B7%E4%BD%BF%E7%94%A8python/" class="article-date">
+  <time datetime="2019-11-28 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-11-28</time>
+</a>
+</span><span class="article-category">
+  <i class="icon icon-folder"></i>
+  <a class="article-category-link" href="/categories/python/"> Python </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+    <a class="article-tag-link" href="/tags/%E8%BD%AC%E8%BD%BD/"> 转载 </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/11/%E5%83%8Fexcel%E4%B8%80%E6%A0%B7%E4%BD%BF%E7%94%A8python/#comments"
+            class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count:3859words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count:8minutes </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+
+<h5 id="excel是数据分析中最常用的工具-本篇文章通过python与excel的功能对比介绍如何使用python通过函数式编程完成excel中的数据处理及分析工作-在python中pandas库用于数据处理-我们从1787页的pandas官网文档中总结出最常用的36个函数-通过这些函数介绍如何通过python完成数据生成和导入-数据清洗-预处理-以及最常见的数据分类-数据筛选-分类-汇总-透视等最常见的操作">Excel是数据分析中最常用的工具，本篇文章通过python与excel的功能对比介绍如何使用python通过函数式编程完成excel中的数据处理及分析工作。在Python中pandas库用于数据处理 ，我们从1787页的pandas官网文档中总结出最常用的36个函数，通过这些函数介绍如何通过python完成数据生成和导入，数据清洗，预处理，以及最常见的数据分类，数据筛选，分类 汇总，透视等最常见的操作。</h5>
+
+<p>文章内容共分为9个部分。这是第一篇，介绍前3部分内容，数据表生成，数据表查看，和数据清洗。以下是《像Excel一样使用python进行数据分析》系列文章的目录。</p>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/目录.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/目录-643x1024.png" alt="目录" /></a></p>
+
+<h1 id="1-生成数据表">1， 生成数据表</h1>
+
+<p>第一部分是生成数据表，常见的生成方法有两种，第一种是导入外部数据，第二种是直接写入数据。 Excel中的文件菜单中提供了获取外部数据的功能，支持数据库和文本文件和页面的多种数据源导入。</p>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/获取外部数据.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/获取外部数据.png" alt="获取外部数据" /></a></p>
+
+<p>python支持从多种类型的数据导入。在开始使用python进行数据导入前需要先导入pandas库，为了方便起见，我们也同时导入numpy库。</p>
+
+<pre><code class="language-python">import numpy as np
+import pandas as pd
+</code></pre>
+
+<h2 id="导入数据表">导入数据表</h2>
+
+<p>下面分别是从excel和csv格式文件导入数据并创建数据表的方法。代码是最简模式，里面有很多可选参数设置，例如列名称，索引列，数据格式等等。感兴趣的朋友可以参考pandas的</p>
+
+<p>官方文档。</p>
+
+<pre><code class="language-python">df=pd.DataFrame(pd.read_csv('name.csv',header=1))
+df=pd.DataFrame(pd.read_excel('name.xlsx'))
+</code></pre>
+
+<h2 id="创建数据表">创建数据表</h2>
+
+<p>另一种方法是通过直接写入数据来生成数据表，excel中直接在单元格中输入数据就可以，python中通过下面的代码来实现。生成数据表的函数是pandas库中的DateFrame函数，数据表一共有6行数据，每行有6个字段。在数据中我们特意设置了一些NA值和有问题的字段，例如包含空格等。后面将在数据清洗步骤进行处理。后面我们将统一以DataFrame的简称df来命名数据表。</p>
+
+<pre><code class="language-python">df = pd.DataFrame({&amp;quot;id&amp;quot;:[1001,1002,1003,1004,1005,1006],
+                   &amp;quot;date&amp;quot;:pd.date_range('20130102', periods=6),
+                   &amp;quot;city&amp;quot;:['Beijing ', 'SH', ' guangzhou ', 'Shenzhen', 'shanghai', 'BEIJING '],
+                   &amp;quot;age&amp;quot;:[23,44,54,32,34,32],
+                   &amp;quot;category&amp;quot;:['100-A','100-B','110-A','110-C','210-A','130-F'],
+                   &amp;quot;price&amp;quot;:[1200,np.nan,2133,5433,np.nan,4432]},
+                   columns =['id','date','city','category','age','price'])
+</code></pre>
+
+<p>这是刚刚创建的数据表，我们没有设置索引列，price字段中包含有NA值，city字段中还包含了一些脏数据。</p>
+
+<h1 id="df-http-bluewhale-cc-wp-content-uploads-2017-04-df-png-http-bluewhale-cc-wp-content-uploads-2017-04-df-png"><a href="http://bluewhale.cc/wp-content/uploads/2017/04/df.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/df.png" alt="df" /></a></h1>
+
+<p>2，数据表检查</p>
+
+<p>第二部分是对数据表进行检查，python中处理的数据量通常会比较大，比如我们之前的文章中介绍的纽约出租车数据和Citibike的骑行数据，数据量都在千万级，我们无法一目了然的 了解数据表的整体情况，必须要通过一些方法来获得数据表的关键信息。数据表检查的另一个目的是了解数据的概况，例如整个数据表的大小，所占空间，数据格式，是否有空值和重复项和具体的数据内容。为后面的清洗和预处理做好准备。</p>
+
+<h2 id="数据维度-行列">数据维度(行列)</h2>
+
+<p>Excel中可以通过CTRL+向下的光标键，和CTRL+向右的光标键来查看行号和列号。Python中使用shape函数来查看数据表的维度，也就是行数和列数，函数返回的结果(6,6)表示数据表有6行，6列。下面是具体的代码。</p>
+
+<pre><code class="language-python">#查看数据表的维度
+df.shape
+(6, 6)
+</code></pre>
+
+<h2 id="数据表信息">数据表信息</h2>
+
+<p>使用info函数查看数据表的整体信息，这里返回的信息比较多，包括数据维度，列名称，数据格式和所占空间等信息。</p>
+
+<pre><code class="language-python">#数据表信息
+df.info()
+
+&amp;amp;lt;class 'pandas.core.frame.DataFrame'&amp;amp;gt;
+RangeIndex: 6 entries, 0 to 5
+Data columns (total 6 columns):
+id          6 non-null int64
+date        6 non-null datetime64[ns]
+city        6 non-null object
+category    6 non-null object
+age         6 non-null int64
+price       4 non-null float64
+dtypes: datetime64[ns](1), float64(1), int64(2), object(2)
+memory usage: 368.0+ bytes
+</code></pre>
+
+<h2 id="查看数据格式">查看数据格式</h2>
+
+<p>Excel中通过选中单元格并查看开始菜单中的数值类型来判断数据的格式。Python中使用dtypes函数来返回数据格式。</p>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/查看数据格式.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/查看数据格式.png" alt="查看数据格式" /></a></p>
+
+<p>Dtypes是一个查看数据格式的函数，可以一次性查看数据表中所有数据的格式，也可以指定一列来单独查看。</p>
+
+<pre><code class="language-python">#查看数据表各列格式
+df.dtypes
+
+id                   int64
+date        datetime64[ns]
+city                object
+category            object
+age                  int64
+price              float64
+dtype: object
+</code></pre>
+
+<pre><code class="language-python">#查看单列格式
+df['B'].dtype
+
+dtype('int64')
+</code></pre>
+
+<h2 id="查看空值">查看空值</h2>
+
+<p>Excel中查看空值的方法是使用“定位条件”功能对数据表中的空值进行定位。“定位条件”在“开始”目录下的“查找和选择”目录中。</p>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/查看空值.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/查看空值.png" alt="查看空值" /></a></p>
+
+<p>Isnull是Python中检验空值的函数，返回的结果是逻辑值，包含空值返回True，不包含则返回False。可以对整个数据表进行检查，也可以单独对某一列进行空值检查。</p>
+
+<pre><code class="language-python">#检查数据空值
+df.isnull()
+</code></pre>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/df_isnull.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/df_isnull.png" alt="df_isnull" /></a>[</p>
+
+<p>](<a href="http://bluewhale.cc/wp-content/uploads/2017/04/df_dropna.png">http://bluewhale.cc/wp-content/uploads/2017/04/df_dropna.png</a>)</p>
+
+<pre><code class="language-python">#检查特定列空值
+df['price'].isnull()
+
+0    False
+1     True
+2    False
+3    False
+4     True
+5    False
+Name: price, dtype: bool
+</code></pre>
+
+<h2 id="查看唯一值">查看唯一值</h2>
+
+<p>Excel中查看唯一值的方法是使用“条件格式”对唯一值进行颜色标记。Python中使用unique函数查看唯一值。</p>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/查看唯一值.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/查看唯一值.png" alt="查看唯一值" /></a></p>
+
+<p>Unique是查看唯一值的函数，只能对数据表中的特定列进行检查。下面是代码，返回的结果是该列中的唯一值。类似与Excel中删除重复项后的结果。</p>
+
+<pre><code class="language-python">#查看city列中的唯一值
+df['city'].unique()
+
+array(['Beijing ', 'SH', ' guangzhou ', 'Shenzhen', 'shanghai', 'BEIJING '], dtype=object)
+</code></pre>
+
+<h2 id="查看数据表数值">查看数据表数值</h2>
+
+<p>Python中的Values函数用来查看数据表中的数值。以数组的形式返回，不包含表头信息。</p>
+
+<pre><code class="language-python">#查看数据表的值
+df.values
+
+array([[1001, Timestamp('2013-01-02 00:00:00'), 'Beijing ', '100-A', 23,
+        1200.0],
+       [1002, Timestamp('2013-01-03 00:00:00'), 'SH', '100-B', 44, nan],
+       [1003, Timestamp('2013-01-04 00:00:00'), ' guangzhou ', '110-A', 54,
+        2133.0],
+       [1004, Timestamp('2013-01-05 00:00:00'), 'Shenzhen', '110-C', 32,
+        5433.0],
+       [1005, Timestamp('2013-01-06 00:00:00'), 'shanghai', '210-A', 34,
+        nan],
+       [1006, Timestamp('2013-01-07 00:00:00'), 'BEIJING ', '130-F', 32,
+        4432.0]], dtype=object)
+</code></pre>
+
+<h2 id="查看列名称">查看列名称</h2>
+
+<p>Colums函数用来单独查看数据表中的列名称。</p>
+
+<pre><code class="language-python">#查看列名称
+df.columns
+
+Index(['id', 'date', 'city', 'category', 'age', 'price'], dtype='object')
+</code></pre>
+
+<h2 id="查看前10行数据">查看前10行数据</h2>
+
+<p>Head函数用来查看数据表中的前N行数据，默认head()显示前10行数据，可以自己设置参数值来确定查看的行数。下面的代码中设置查看前3行的数据。</p>
+
+<pre><code class="language-python">#查看前3行数据
+df.head(3)
+</code></pre>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/df_head3.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/df_head3.png" alt="df_head(3)" /></a></p>
+
+<h2 id="查看后10行数据">查看后10行数据</h2>
+
+<p>Tail行数与head函数相反，用来查看数据表中后N行的数据，默认tail()显示后10行数据，可以自己设置参数值来确定查看的行数。下面的代码中设置查看后3行的数据。</p>
+
+<pre><code class="language-python">#查看最后3行
+df.tail(3)
+</code></pre>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/df_tail3.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/df_tail3.png" alt="df_tail(3)" /></a></p>
+
+<h1 id="3-数据表清洗">3，数据表清洗</h1>
+
+<p>第三部分是对数据表中的问题进行清洗。主要内容包括对空值，大小写问题，数据格式和重复值的处理。这里不包含对数据间的逻辑验证。</p>
+
+<h2 id="处理空值-删除或填充">处理空值(删除或填充)</h2>
+
+<p>我们在创建数据表的时候在price字段中故意设置了几个NA值。对于空值的处理方式有很多种，可以直接删除包含空值的数据，也可以对空值进行填充，比如用0填充或者用均值填充。还可以根据不同字段的逻辑对空值进行推算。</p>
+
+<p>Excel中可以通过“查找和替换”功能对空值进行处理，将空值统一替换为0或均值。也可以通过“定位”空值来实现。</p>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/查找和替换空值.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/查找和替换空值.png" alt="查找和替换空值" /></a></p>
+
+<p>Python中处理空值的方法比较灵活，可以使用 Dropna函数用来删除数据表中包含空值的数据，也可以使用fillna函数对空值进行填充。下面的代码和结果中可以看到使用dropna函数后，包含NA值的两个字段已经不见了。返回的是一个不包含空值的数据表。</p>
+
+<pre><code class="language-python">#删除数据表中含有空值的行
+df.dropna(how='any')
+</code></pre>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/df_dropna.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/df_dropna.png" alt="df_dropna" /></a></p>
+
+<p>除此之外也可以使用数字对空值进行填充，下面的代码使用fillna函数对空值字段填充数字0。</p>
+
+<pre><code class="language-python">#使用数字0填充数据表中空值
+df.fillna(value=0)
+</code></pre>
+
+<p>我们选择填充的方式来处理空值，使用price列的均值来填充NA字段，同样使用fillna函数，在要填充的数值中使用mean函数先计算price列当前的均值，然后使用这个均值对NA进行填</p>
+
+<p>充。可以看到两个空值字段显示为3299.5</p>
+
+<pre><code class="language-python">#使用price均值对NA进行填充
+df['price'].fillna(df['price'].mean())
+
+0    1200.0
+1    3299.5
+2    2133.0
+3    5433.0
+4    3299.5
+5    4432.0
+Name: price, dtype: float64
+</code></pre>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/df_nan.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/df_nan.png" alt="df_nan" /></a></p>
+
+<h2 id="清理空格">清理空格</h2>
+
+<p>除了空值，字符中的空格也是数据清洗中一个常见的问题，下面是清除字符中空格的代码。</p>
+
+<pre><code class="language-python">#清除city字段中的字符空格
+df['city']=df['city'].map(str.strip)
+</code></pre>
+
+<h2 id="大小写转换">大小写转换</h2>
+
+<p>在英文字段中，字母的大小写不统一也是一个常见的问题。Excel中有UPPER，LOWER等函数，python中也有同名函数用来解决大小写的问题。在数据表的city列中就存在这样的问题。我们将city列的所有字母转换为小写。下面是具体的代码和结果。</p>
+
+<pre><code class="language-python">
+#city列大小写转换
+
+df['city']=df['city'].str.lower()
+
+</code></pre>
+
+<h2 id="lower-http-bluewhale-cc-wp-content-uploads-2017-04-lower-png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/lower.png" alt="lower" /></h2>
+
+<h2 id="更改数据格式">更改数据格式</h2>
+
+<p>Excel中通过“设置单元格格式”功能可以修改数据格式。Python中通过astype函数用来修改数据格式。</p>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/设置单元格格式.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/设置单元格格式.png" alt="设置单元格格式" /></a></p>
+
+<p>Python中dtype是查看数据格式的函数，与之对应的是astype函数，用来更改数据格式。下面的代码中将price字段的值修改为int格式。</p>
+
+<pre><code class="language-python">#更改数据格式
+df['price'].astype('int')
+
+0    1200
+1    3299
+2    2133
+3    5433
+4    3299
+5    4432
+Name: price, dtype: int32
+</code></pre>
+
+<h2 id="更改列名称">更改列名称</h2>
+
+<p>Rename是更改列名称的函数，我们将来数据表中的category列更改为category-size。下面是具体的代码和更改后的结果。</p>
+
+<pre><code class="language-python">#更改列名称
+df.rename(columns={'category': 'category-size'})
+</code></pre>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/df_rename.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/df_rename.png" alt="df_rename" /></a></p>
+
+<h2 id="删除重复值">删除重复值</h2>
+
+<p>很多数据表中还包含重复值的问题，Excel的数据目录下有“删除重复项”的功能，可以用来删除数据表中的重复值。默认Excel会保留最先出现的数据，删除后面重复出现的数据。</p>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/删除重复项.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/删除重复项.png" alt="删除重复项" /></a></p>
+
+<p>Python中使用drop_duplicates函数删除重复值。我们以数据表中的city列为例，city字段中存在重复值。默认情况下drop_duplicates()将删除后出现的重复值(与excel逻辑一致)。增加keep=’last’参数后将删除最先出现的重复值，保留最后的值。下面是具体的代码和比较结果。</p>
+
+<p>原始的city列中beijing存在重复，分别在第一位和最后一位。</p>
+
+<pre><code class="language-python">df['city']
+0      beijing
+1           sh
+2    guangzhou
+3     shenzhen
+4     shanghai
+5      beijing
+Name: city, dtype: object
+</code></pre>
+
+<p>使用默认的drop_duplicates()函数删除重复值，从结果中可以看到第一位的beijing被保留，最后出现的beijing被删除。</p>
+
+<pre><code class="language-python">#删除后出现的重复值
+df['city'].drop_duplicates()
+0      beijing
+1           sh
+2    guangzhou
+3     shenzhen
+4     shanghai
+Name: city, dtype: object
+</code></pre>
+
+<p>设置keep=&#8217;last‘’参数后，与之前删除重复值的结果相反，第一位出现的beijing被删除，保留了最后一位出现的beijing。</p>
+
+<pre><code class="language-python">#删除先出现的重复值
+df['city'].drop_duplicates(keep='last')
+1           sh
+2    guangzhou
+3     shenzhen
+4     shanghai
+5      beijing
+Name: city, dtype: objec
+</code></pre>
+
+<h2 id="数值修改及替换">数值修改及替换</h2>
+
+<p>数据清洗中最后一个问题是数值修改或替换，Excel中使用“查找和替换”功能就可以实现数值的替换。</p>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/查找和替换空值1.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/查找和替换空值1.png" alt="查找和替换空值" /></a></p>
+
+<p>Python中使用replace函数实现数据替换。数据表中city字段上海存在两种写法，分别为shanghai和SH。我们使用replace函数对SH进行替换。</p>
+
+<pre><code class="language-python">#数据替换
+df['city'].replace('sh', 'shanghai')
+0      beijing
+1     shanghai
+2    guangzhou
+3     shenzhen
+4     shanghai
+5      beijing
+Name: city, dtype: object
+</code></pre>
+
+<p>在第二篇文章中我们将继续介绍4-6部分的内容，分别为数据预处理，数据提取和数据筛选三部分的问题。感兴趣的朋友请继续关注。</p>
+
+<p>######文章及图片版权归 蓝鲸（王彦平）所有。转自“<a href="http://bluewhale.cc/">蓝鲸网站分析博客</a>”。</p>
+
+    </div>
+  </article>
+<section id="comments">
+</section>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://lcoco.github.io/2019/03/markdown-syntax/" title="Markdown Syntax Guide"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
+            </li>
+            <li class="next">
+                <a href="https://lcoco.github.io/2019/11/35-%E4%B8%AA-java-%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96%E5%B0%8F%E6%8A%80%E5%B7%A7/"
+                    title="35 个 Java 代码优化小技巧"><span>Older&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="Catalogue" role="button">
+                    <span>[&nbsp;</span><span>Catalogue</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter"
+                data-mobile-sites="weibo,qq,qzone"></div>
+        </div>
+    </div>
+</nav>
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://github.com/lcoco" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+    <li><a href="https://lcoco.github.io/index.xml" target="_blank" title="rss" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-rss"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;2017  -
+    2019
+    <div class="publishby">
+        Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+   window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/rust.min.js"></script>
+<script type="text/javascript"
+   src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script>
+hljs.configure({
+  tabReplace: '    ', 
+  classPrefix: ''     
+                      
+})
+hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="https://lcoco.github.io/js/application.js"></script>
+<script type="text/javascript" src="https://lcoco.github.io/js/plugin.js"></script>
+<script>
+      (function (window) {
+          var INSIGHT_CONFIG = {
+              TRANSLATION: {
+                  POSTS: 'Posts',
+                  PAGES: 'Pages',
+                  CATEGORIES: 'Categories',
+                  TAGS: 'Tags',
+                  UNTITLED: '(Untitled)',
+              },
+              ROOT_URL: 'https:\/\/lcoco.github.io',
+              CONTENT_URL: 'https:\/\/lcoco.github.io\/searchindex.json ',
+          };
+          window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+      })(window);
+      </script>
+<script type="text/javascript" src="https://lcoco.github.io/js/insight.js"></script>
+
+  </body>
+</html>

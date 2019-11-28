@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>转载 on Pure theme for Hugo</title>
+    <link>https://lcoco.github.io/tags/%E8%BD%AC%E8%BD%BD/</link>
+    <description>Recent content in 转载 on Pure theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 28 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://lcoco.github.io/tags/%E8%BD%AC%E8%BD%BD/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>像Excel一样使用python进行数据分析-(1)</title>
+      <link>https://lcoco.github.io/2019/11/%E5%83%8Fexcel%E4%B8%80%E6%A0%B7%E4%BD%BF%E7%94%A8python/</link>
+      <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://lcoco.github.io/2019/11/%E5%83%8Fexcel%E4%B8%80%E6%A0%B7%E4%BD%BF%E7%94%A8python/</guid>
+      <description>Excel是数据分析中最常用的工具，本篇文章通过python与excel的功能对比介绍如何使用python通过函数式编程完成excel中的数</description>
+    </item>
+    
+  </channel>
+</rss>
