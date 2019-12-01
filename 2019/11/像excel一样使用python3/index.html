@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+        像Excel一样使用python进行数据分析-(3) - Pure theme for Hugo
+      </title>
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  
+  <meta name="theme-color" content="#000000" />
+  
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <meta name="description" content="像Excel一样使用python进行数据分析-(3)" />
+  <meta name="generator" content="Hugo 0.59.0 with theme pure" />
+  <title>像Excel一样使用python进行数据分析-(3) - Pure theme for Hugo</title>
+  
+
+  <link rel="stylesheet" href="https://lcoco.github.io/css/style.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css">
+  <meta property="og:title" content="像Excel一样使用python进行数据分析-(3)" />
+<meta property="og:description" content="像Excel一样使用python进行数据分析-(3)" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lcoco.github.io/2019/11/%E5%83%8Fexcel%E4%B8%80%E6%A0%B7%E4%BD%BF%E7%94%A8python3/" />
+<meta property="article:published_time" content="2019-11-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-11-28T00:00:00+00:00" />
+
+<meta itemprop="name" content="像Excel一样使用python进行数据分析-(3)">
+<meta itemprop="description" content="像Excel一样使用python进行数据分析-(3)">
+
+
+<meta itemprop="datePublished" content="2019-11-28T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-11-28T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="2507">
+
+
+
+<meta itemprop="keywords" content="转载," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="像Excel一样使用python进行数据分析-(3)"/>
+<meta name="twitter:description" content="像Excel一样使用python进行数据分析-(3)"/>
+
+  <!--[if lte IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+    <![endif]-->
+
+  <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+  </head>
+  <body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="https://github.com/lcoco" target="_blank">
+            <img class="img-circle img-rotate" src="https://lcoco.github.io/avatar.png" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">Taige</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">Get Moving! by HT.Zhang</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>Beijing, China</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-home">
+                <a href="/">
+                    <i class="icon icon-home-fill"></i>
+                  <span class="menu-title">Home</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-archives">
+                <a href="/posts">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">Archives</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-categories">
+                <a href="/categories">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">Categories</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-tags">
+                <a href="/tags">
+                    <i class="icon icon-tags"></i>
+                  <span class="menu-title">Tags</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-about">
+                <a href="/about">
+                    <i class="icon icon-cup-fill"></i>
+                  <span class="menu-title">About</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">Board</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content"><p>enjoy~</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+      <div class="widget">
+    <h3 class="widget-title"> Categories</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+            <li class="category-list-item"><a href="https://lcoco.github.io/categories/java/" class="category-list-link">java</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://lcoco.github.io/categories/python/" class="category-list-link">python</a><span class="category-list-count">3</span></li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> Tags</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://lcoco.github.io/tags/%E4%BC%98%E5%8C%96/" class="tag-list-link">优化</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://lcoco.github.io/tags/%E8%BD%AC%E8%BD%BD/" class="tag-list-link">转载</a><span
+                    class="tag-list-count">3</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+      
+  </div>
+</aside>
+
+    
+    
+  <aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+    <div class="slimContent">
+      <nav id="toc" class="article-toc">
+        <h3 class="toc-title">Catalogue</h3>
+        <div class="toc-content always-active"><nav id="TableOfContents">
+<ul>
+<li><a href="#像excel一样使用python进行数据分析-3">像Excel一样使用python进行数据分析-(3)</a></li>
+<li><a href="#7-数据汇总"><strong>7，数据汇总</strong></a>
+<ul>
+<li><a href="#分类汇总"><strong>分类汇总</strong></a></li>
+<li><a href="#groupby1-http-bluewhale-cc-wp-content-uploads-2017-04-groupby1-png-http-bluewhale-cc-wp-content-uploads-2017-04-groupby1-png"><a href="http://bluewhale.cc/wp-content/uploads/2017/04/groupby1.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/groupby1.png" alt="groupby1" /></a></a></li>
+</ul></li>
+<li><a href="#8-数据统计"><strong>8，数据统计</strong></a>
+<ul>
+<li><a href="#数据采样">数据采样</a></li>
+<li><a href="#采样后放回-http-bluewhale-cc-wp-content-uploads-2017-04-采样后放回-1024x348-png-http-bluewhale-cc-wp-content-uploads-2017-04-采样后放回-png"><a href="http://bluewhale.cc/wp-content/uploads/2017/04/采样后放回.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/采样后放回-1024x348.png" alt="采样后放回" /></a></a></li>
+</ul></li>
+<li><a href="#9-数据输出"><strong>9，数据输出</strong></a></li>
+</ul>
+</nav>
+        </div>
+      </nav>
+    </div>
+  </aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2019/11/%E5%83%8Fexcel%E4%B8%80%E6%A0%B7%E4%BD%BF%E7%94%A8python3/"
+    >像Excel一样使用python进行数据分析-(3)</a
+  >
+</h1>
+
+      <div class="article-meta">
+        <span class="article-date">
+  <i class="icon icon-calendar-check"></i>
+<a href="https://lcoco.github.io/2019/11/%E5%83%8Fexcel%E4%B8%80%E6%A0%B7%E4%BD%BF%E7%94%A8python3/" class="article-date">
+  <time datetime="2019-11-28 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-11-28</time>
+</a>
+</span><span class="article-category">
+  <i class="icon icon-folder"></i>
+  <a class="article-category-link" href="/categories/python/"> Python </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+    <a class="article-tag-link" href="/tags/%E8%BD%AC%E8%BD%BD/"> 转载 </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/11/%E5%83%8Fexcel%E4%B8%80%E6%A0%B7%E4%BD%BF%E7%94%A8python3/#comments"
+            class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count:2507words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count:6minutes </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+
+<h1 id="像excel一样使用python进行数据分析-3">像Excel一样使用python进行数据分析-(3)</h1>
+
+<p>Excel是数据分析中最常用的工具，本篇文章通过python与excel的功能对比介绍如何使用python通过函数式编程完成excel中的数据处理及分析工作。在Python中pandas库用于数据处理，我们从1787页的pandas官网文档中总结出最常用的36个函数，通过这些函数介绍如何通过python完成数据生成和导入，数据清洗，预处理，以及最常见的数据分类，数据筛选，分类汇总，透视等最常见的操作。</p>
+
+<p>这个系列文章内容共分为9个部分。已由人民邮电出版社出版，感兴趣的朋友可以在<a href="http://www.epubit.com.cn/book/details/4900">异步社区</a>获取完整版。</p>
+
+<p><a href="http://www.epubit.com.cn/book/details/4900"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/excel_python1.png" alt="excel_python" /></a></p>
+
+<p>前两篇文章链接在这里：</p>
+
+<p><a href="http://bluewhale.cc/2017-04-06/use-python-for-data-analysis-like-excel-1.html">像Excel一样使用python进行数据分析-(1)</a></p>
+
+<p><a href="http://bluewhale.cc/2017-04-14/use-python-for-data-analysis-like-excel-2.html">像Excel一样使用python进行数据分析-(2)</a></p>
+
+<p>这是第三篇，介绍第7-9部分的内容，数据汇总，数据统计，和数据输出。</p>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/7-9目录.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/7-9目录.png" alt="7-9目录" /></a></p>
+
+<h1 id="7-数据汇总"><strong>7，数据汇总</strong></h1>
+
+<p>第七部分是对数据进行分类汇总，Excel中使用分类汇总和数据透视可以按特定维度对数据进行汇总，python中使用的主要函数是groupby和pivot_table。下面分别介绍这两个函数的使用方法。</p>
+
+<h2 id="分类汇总"><strong>分类汇总</strong></h2>
+
+<p>Excel的数据目录下提供了“分类汇总”功能，可以按指定的字段和汇总方式对数据表进行汇总。Python中通过Groupby函数完成相应的操作，并可以支持多级分类汇总。</p>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/分类汇总1.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/分类汇总1.png" alt="分类汇总1" /></a></p>
+
+<p>Groupby是进行分类汇总的函数，使用方法很简单，制定要分组的列名称就可以，也可以同时制定多个列名称，groupby按列名称出现的顺序进行分组。同时要制定分组后的汇总方式，常见的是计数和求和两种。</p>
+
+<pre><code class="language-python">#对所有列进行计数汇总
+df_inner.groupby('city').count()
+</code></pre>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/groupby.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/groupby.png" alt="groupby" /></a></p>
+
+<p>可以在groupby中设置列名称来对特定的列进行汇总。下面的代码中按城市对id字段进行汇总计数。</p>
+
+<pre><code class="language-python">#对特定的ID列进行计数汇总
+df_inner.groupby('city')['id'].count()
+city
+beijing 2
+guangzhou 1
+shanghai 2
+shenzhen 1
+Name: id, dtype: int64
+</code></pre>
+
+<p>在前面的基础上增加第二个列名称，分布对city和size两个字段进行计数汇总。</p>
+
+<pre><code class="language-python">#对两个字段进行汇总计数
+df_inner.groupby(['city','size'])['id'].count()
+city size
+beijing A 1
+F 1
+guangzhou A 1
+shanghai A 1
+B 1
+shenzhen C 1
+Name: id, dtype: int64
+</code></pre>
+
+<p>除了计数和求和外，还可以对汇总后的数据同时按多个维度进行计算，下面的代码中按城市对price字段进行汇总，并分别计算price的数量，总金额和平均金额。</p>
+
+<pre><code class="language-python">#对city字段进行汇总并计算price的合计和均值。
+df_inner.groupby('city')['price'].agg([len,np.sum, np.mean])
+</code></pre>
+
+<h2 id="groupby1-http-bluewhale-cc-wp-content-uploads-2017-04-groupby1-png-http-bluewhale-cc-wp-content-uploads-2017-04-groupby1-png"><a href="http://bluewhale.cc/wp-content/uploads/2017/04/groupby1.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/groupby1.png" alt="groupby1" /></a></h2>
+
+<p>数据透视</p>
+
+<p>Excel中的插入目录下提供“数据透视表”功能对数据表按特定维度进行汇总。Python中也提供了数据透视表功能。通过pivot_table函数实现同样的效果。</p>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/数据透视.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/数据透视.png" alt="数据透视" /></a></p>
+
+<p>数据透视表也是常用的一种数据分类汇总方式，并且功能上比groupby要强大一些。下面的代码中设定city为行字段，size为列字段，price为值字段。分别计算price的数量和金额并且按行与列进行汇总。</p>
+
+<pre><code class="language-python">#数据透视表
+pd.pivot_table(df_inner,index=[&amp;quot;city&amp;quot;],values=[&amp;quot;price&amp;quot;],columns=[&amp;quot;size&amp;quot;],aggfunc=[len,np.sum],fill_value=0,margins=True)
+</code></pre>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/pivot_table.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/pivot_table.png" alt="pivot_table" /></a></p>
+
+<h1 id="8-数据统计"><strong>8，数据统计</strong></h1>
+
+<p>第九部分为数据统计，这里主要介绍数据采样，标准差，协方差和相关系数的使用方法。</p>
+
+<h2 id="数据采样">数据采样</h2>
+
+<p>Excel的数据分析功能中提供了数据抽样的功能，如下图所示。Python通过sample函数完成数据采样。</p>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/数据抽样.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/数据抽样.png" alt="数据抽样" /></a></p>
+
+<p>Sample是进行数据采样的函数，设置n的数量就可以了。函数自动返回参与的结果。</p>
+
+<pre><code class="language-python">#简单的数据采样
+df_inner.sample(n=3)
+</code></pre>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/简单随机采样.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/简单随机采样-1024x218.png" alt="简单随机采样" /></a></p>
+
+<p>Weights参数是采样的权重，通过设置不同的权重可以更改采样的结果，权重高的数据将更有希望被选中。这里手动设置6条数据的权重值。将前面4个设置为0，后面两个分别设置为0.5。</p>
+
+<pre><code class="language-python">#手动设置采样权重
+weights = [0, 0, 0, 0, 0.5, 0.5]
+df_inner.sample(n=2, weights=weights)
+</code></pre>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/手动设置采样权重1.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/手动设置采样权重1-1024x341.png" alt="手动设置采样权重1" /></a></p>
+
+<p>从采样结果中可以看出，后两条权重高的数据被选中。</p>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/手动设置采样权重2.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/手动设置采样权重2-1024x176.png" alt="手动设置采样权重2" /></a></p>
+
+<p>Sample函数中还有一个参数replace，用来设置采样后是否放回。</p>
+
+<pre><code class="language-python">#采样后不放回
+df_inner.sample(n=6, replace=False)
+</code></pre>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/采样后不放回.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/采样后不放回-1024x343.png" alt="采样后不放回" /></a></p>
+
+<pre><code class="language-python">#采样后放回
+df_inner.sample(n=6, replace=True)
+</code></pre>
+
+<h2 id="采样后放回-http-bluewhale-cc-wp-content-uploads-2017-04-采样后放回-1024x348-png-http-bluewhale-cc-wp-content-uploads-2017-04-采样后放回-png"><a href="http://bluewhale.cc/wp-content/uploads/2017/04/采样后放回.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/采样后放回-1024x348.png" alt="采样后放回" /></a></h2>
+
+<p>描述统计</p>
+
+<p>Excel中的数据分析中提供了描述统计的功能。Python中可以通过Describe对数据进行描述统计。</p>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/描述统计.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/描述统计.png" alt="描述统计" /></a></p>
+
+<p>Describe函数是进行描述统计的函数，自动生成数据的数量，均值，标准差等数据。下面的代码中对数据表进行描述统计，并使用round函数设置结果显示的小数位。并对结果数据进行转置。</p>
+
+<pre><code class="language-python">#数据表描述性统计
+df_inner.describe().round(2).T
+</code></pre>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/describe.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/describe.png" alt="describe" /></a></p>
+
+<p><strong>标准差</strong></p>
+
+<p>Python中的Std函数用来接算特定数据列的标准差。</p>
+
+<pre><code class="language-python">#标准差
+df_inner['price'].std()
+1523.3516556155596
+</code></pre>
+
+<p><strong>协方差</strong></p>
+
+<p>Excel中的数据分析功能中提供协方差的计算，python中通过cov函数计算两个字段或数据表中各字段间的协方差。</p>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/协方差.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/协方差.png" alt="协方差" /></a></p>
+
+<p>Cov函数用来计算两个字段间的协方差，可以只对特定字段进行计算，也可以对整个数据表中各个列之间进行计算。</p>
+
+<pre><code class="language-python">#两个字段间的协方差
+df_inner['price'].cov(df_inner['m-point'])
+17263.200000000001
+</code></pre>
+
+<pre><code class="language-python">#数据表中所有字段间的协方差
+df_inner.cov()
+</code></pre>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/cov.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/cov.png" alt="cov" /></a></p>
+
+<p><strong>相关分析</strong></p>
+
+<p>Excel的数据分析功能中提供了相关系数的计算功能，python中则通过corr函数完成相关分析的操作，并返回相关系数。</p>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/相关系数.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/相关系数.png" alt="相关系数" /></a></p>
+
+<p>Corr函数用来计算数据间的相关系数，可以单独对特定数据进行计算，也可以对整个数据表中各个列进行计算。相关系数在-1到1之间，接近1为正相关，接近-1为负相关，0为不相关。</p>
+
+<pre><code class="language-python">#相关性分析
+df_inner['price'].corr(df_inner['m-point'])
+0.77466555617085264
+</code></pre>
+
+<pre><code class="language-python">#数据表相关性分析
+df_inner.corr()
+</code></pre>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/corr.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/corr.png" alt="corr" /></a></p>
+
+<h1 id="9-数据输出"><strong>9，数据输出</strong></h1>
+
+<p>第九部分是数据输出，处理和分析完的数据可以输出为xlsx格式和csv格式。</p>
+
+<p><strong>写入excel</strong></p>
+
+<pre><code class="language-python">#输出到excel格式
+df_inner.to_excel('excel_to_python.xlsx', sheet_name='bluewhale_cc')
+</code></pre>
+
+<p><a href="http://bluewhale.cc/wp-content/uploads/2017/04/excel.png"><img src="http://bluewhale.cc/wp-content/uploads/2017/04/excel-1024x156.png" alt="excel" /></a></p>
+
+<p><strong>写入csv</strong></p>
+
+<pre><code class="language-python">#输出到CSV格式
+df_inner.to_csv('excel_to_python.csv')
+</code></pre>
+
+<p>在数据处理的过程中，大部分基础工作是重复和机械的，对于这部分基础工作，我们可以使用自定义函数进行自动化。以下简单介绍对数据表信息获取自动化处理。</p>
+
+<pre><code class="language-python">#创建数据表
+df = pd.DataFrame({&amp;quot;id&amp;quot;:[1001,1002,1003,1004,1005,1006],
+&amp;quot;date&amp;quot;:pd.date_range('20130102', periods=6),
+&amp;quot;city&amp;quot;:['Beijing ', 'SH', ' guangzhou ', 'Shenzhen', 'shanghai', 'BEIJING '],
+&amp;quot;age&amp;quot;:[23,44,54,32,34,32],
+&amp;quot;category&amp;quot;:['100-A','100-B','110-A','110-C','210-A','130-F'],
+&amp;quot;price&amp;quot;:[1200,np.nan,2133,5433,np.nan,4432]},
+columns =['id','date','city','category','age','price'])
+</code></pre>
+
+<pre><code class="language-python">#创建自定义函数
+def table_info(x):
+    shape=x.shape
+    types=x.dtypes
+    colums=x.columns
+    print(&amp;quot;数据维度(行，列):\n&amp;quot;,shape)
+    print(&amp;quot;数据格式:\n&amp;quot;,types)
+    print(&amp;quot;列名称:\n&amp;quot;,colums)
+</code></pre>
+
+<pre><code class="language-python">#调用自定义函数获取df数据表信息并输出结果
+table_info(df)
+
+数据维度(行，列):
+(6, 6)
+数据格式:
+id int64
+date datetime64[ns]
+city object
+category object
+age int64
+price float64
+dtype: object
+列名称:
+Index(['id', 'date', 'city', 'category', 'age', 'price'], dtype='object')
+</code></pre>
+
+<p>本篇是《像Excel一样使用python进行数据分析》系列文章的最后一篇。在这个系列中我们列举了python中36个简单的函数来实现excel中最常见的一些功能。感兴趣的朋友可以下载并阅读pandas官方文档，里面有更详细的函数说明。也欢迎给我留言进行交流。</p>
+
+<p>【所有文章及图片版权归 蓝鲸（王彦平）所有。欢迎转载，但请注明转自“<a href="http://bluewhale.cc/">蓝鲸网站分析博客</a>”。】</p>
+
+    </div>
+  </article>
+<section id="comments">
+</section>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="next">
+                <a href="https://lcoco.github.io/2019/11/%E5%83%8Fexcel%E4%B8%80%E6%A0%B7%E4%BD%BF%E7%94%A8python2/"
+                    title="像Excel一样使用python进行数据分析-(2)"><span>Older&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="Catalogue" role="button">
+                    <span>[&nbsp;</span><span>Catalogue</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter"
+                data-mobile-sites="weibo,qq,qzone"></div>
+        </div>
+    </div>
+</nav>
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://github.com/lcoco" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+    <li><a href="https://lcoco.github.io/index.xml" target="_blank" title="rss" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-rss"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;2017  -
+    2019
+    <div class="publishby">
+        Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+   window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/rust.min.js"></script>
+<script type="text/javascript"
+   src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script>
+hljs.configure({
+  tabReplace: '    ', 
+  classPrefix: ''     
+                      
+})
+hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="https://lcoco.github.io/js/application.js"></script>
+<script type="text/javascript" src="https://lcoco.github.io/js/plugin.js"></script>
+<script>
+      (function (window) {
+          var INSIGHT_CONFIG = {
+              TRANSLATION: {
+                  POSTS: 'Posts',
+                  PAGES: 'Pages',
+                  CATEGORIES: 'Categories',
+                  TAGS: 'Tags',
+                  UNTITLED: '(Untitled)',
+              },
+              ROOT_URL: 'https:\/\/lcoco.github.io\/',
+              CONTENT_URL: 'https:\/\/lcoco.github.io\/searchindex.json ',
+          };
+          window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+      })(window);
+      </script>
+<script type="text/javascript" src="https://lcoco.github.io/js/insight.js"></script>
+
+  </body>
+</html>
