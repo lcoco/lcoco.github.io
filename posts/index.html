@@ -29,7 +29,8 @@
 
   <link rel="alternate" type="application/rss+xml" href="https://lcoco.github.io/posts/index.xml" title="Pure theme for Hugo" />
   <link rel="stylesheet" href="https://lcoco.github.io/css/style.css">
-  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css"> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
   <meta property="og:title" content="Posts" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
@@ -275,20 +276,11 @@
     <span>&nbsp;&nbsp;&nbsp;</span>像Excel一样使用python进行数据分析-(1)
 </a>
             
-<article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
-    <div class="panel-body">
-        <div class="article-meta">
-            <time datetime="2019-11-28 00:00:00 &#43;0000 UTC"
-                itemprop="datePublished">2019-11-28</time>
-        </div>
-        <h3 class="article-title" itemprop="name">
-            <a class="article-link" href="https://lcoco.github.io/2019/11/%E5%83%8Fexcel%E4%B8%80%E6%A0%B7%E4%BD%BF%E7%94%A8python2/">像Excel一样使用python进行数据分析-(2)</a>
-        </h3>
-    </div>
-    <div class="panel-footer">
-        <a href="https://lcoco.github.io/tags/%E8%BD%AC%E8%BD%BD" class="label label-default mb">转载</a>
-    </div>
-</article>
+<a href="https://lcoco.github.io/2019/11/%E5%83%8Fexcel%E4%B8%80%E6%A0%B7%E4%BD%BF%E7%94%A8python2/" class="collection-item" itemprop="url"  target="_blank" >
+    <time datetime="2019-11-28 00:00:00 &#43;0000 UTC"
+        itemprop="datePublished">2019-11-28</time>
+    <span>&nbsp;&nbsp;&nbsp;</span>像Excel一样使用python进行数据分析-(2)
+</a>
             
 <a href="https://lcoco.github.io/2019/11/%E5%83%8Fexcel%E4%B8%80%E6%A0%B7%E4%BD%BF%E7%94%A8python3/" class="collection-item" itemprop="url"  target="_blank" >
     <time datetime="2019-11-28 00:00:00 &#43;0000 UTC"
@@ -349,5 +341,20 @@ hljs.initHighlightingOnLoad();
       </script>
 <script type="text/javascript" src="https://lcoco.github.io/js/insight.js"></script>
 
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '530943107d3ffa2b88c2',
+        clientSecret: '38bcd7a21609f15e2a8ef9c7204f42f5ca291759',
+        repo: 'lcoco.github.io',
+        owner: 'lcoco',
+        admin: ['lcoco'],
+        id: md5(location.pathname),
+        distractionFreeMode: true
+    });
+    gitalk.render('comments');
+</script>
   </body>
 </html>
